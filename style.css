@@ -1,0 +1,16 @@
+h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 58px;
+}
+
+.thumbnail {
+  background-color: #d9edf7;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+a {
+  text-decoration: none !important; 
+}
+

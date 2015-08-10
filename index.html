@@ -2,16 +2,36 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Latest Camper News</title>
+    <title>FreeCodeCamp News</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'> 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js"></script>
-
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
+    <script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.min.js"></script>
     <link href="style.css" rel="stylesheet">
     <script src="campernews.js"></script>
   </head>
   <body>
+  <div class="container-fluid" style="display:none">
+    <h1 class="center-block text-center text-primary">
+      <a href="http://www.freecodecamp.com" target="_blank">Latest Camper News</a>
+    </h1>
+    <br/>
+    <div class="row masonry-container" data-bind="foreach:data">
+      <div class="col-xs-6 col-sm-5 col-md-3 col-lg-2 item">
+        <a data-bind="attr: {href: link}" target="_blank">
+          <div class="thumbnail">
+            <img class="img-rounded" data-bind="attr: {src: author.picture }">
+            <div class="caption">
+              <h4 data-bind="text: headline"></h4>
+              <p data-bind="text:metaDescription"></p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
