@@ -10,7 +10,20 @@ h1 {
 body {
   background-color: #f3f3f3;
 }
-a {
+.nounderline {
   text-decoration: none !important; 
 }
 
+.bottomLeft {;
+  display: inline-block;
+  width: 30%;
+  font-family: 'Ubuntu Mono';
+  font-size: 15px;
+  color: green;
+}
+.bottomRight {
+  width: 67%;
+  display:inline-block;
+  font-family: 'Ubuntu Mono';
+  text-align:right;
+}
